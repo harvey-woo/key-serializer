@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - 8
+cache:
+  directories:
+    - node_modules
+script:
+  - npm run lint
+  - npm t
+
+after_success:
+  - npm run codecov
+
+before_deploy:
+  - npm run build
+deploy:
+  provider: npm
+  email: i@cat5th.com
+  api_key: $NPM_AUTH_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true

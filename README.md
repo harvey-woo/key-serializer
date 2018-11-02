@@ -38,4 +38,11 @@ keySerializer.query('a[1].b[0]')
 keySerializer.get(obj, 'a[1].b[0]')
 // result: 5
 ```
+
+### set value
+```javascript
+keySerializer.set(obj, 'a[1].b[0]', 1)
+console.log(obj.a[1].b[0])
+// result: 1
+```
 > **notice** get/query function will throw TypeError when target is null or undefined, keep in mind, and always use get/query in try block

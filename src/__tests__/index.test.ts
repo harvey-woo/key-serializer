@@ -27,3 +27,8 @@ describe('test get', () => {
     expect(serializer.get(obj, ['a', 1, 'b', 1])).toBe(6)
   })
 })
+test('set', () => {
+  const obj = { a: [{ b: [1, 2], c: [3, 4] }, { b: [5, 6], c: [7, 8] }] }
+  serializer.set(obj, 'a[1].b[1]', 2)
+  expect(obj.a[1].b[1]).toBe(2)
+})

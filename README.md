@@ -23,14 +23,14 @@ keySerializer.stringify(['a', 1, 'b', 0])
 ### parse keys
 
 ```javascript
-keySerializer.stringify('a[1].b[0]')
+keySerializer.parse('a[1].b[0]')
 // result: ['a', 1, 'b', 0]
 ```
 ### query object
 
 ```javascript
 const obj = { a: [{ b: [1, 2], c: [3, 4] }, { b: [5, 6], c: [7, 8] }] }
-keySerializer.query('a[1].b[0]')
+keySerializer.query(obj, 'a[1].b[0]')
 // result: { value: 5, key: 0, target: [5, 6]}
 ```
 ### get value
@@ -45,4 +45,4 @@ keySerializer.set(obj, 'a[1].b[0]', 1)
 console.log(obj.a[1].b[0])
 // result: 1
 ```
-> **notice** get/query function will throw TypeError when target is null or undefined, keep in mind, and always use get/query in try block
+> **notice**: get/set/query function will throw TypeError when target is null or undefined, keep in mind, and always use get/query in try block

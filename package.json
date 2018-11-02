@@ -6,6 +6,8 @@
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
+    "lint-test": "npm run lint && npm run test",
+    "prepush": "npm run lint-test",
     "test": "jest",
     "build": "npm run type && webpack",
     "type": "tsc --emitDeclarationOnly",
@@ -13,6 +15,7 @@
     "postversion": "git push origin --tags",
     "codecov": "codecov"
   },
+  "pre-push": "prepush",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/harvey-woo/key-serializer.git"
@@ -42,6 +45,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-typescript": "^0.13.0",
     "jest": "^23.6.0",
+    "pre-push": "^0.1.1",
     "ts-jest": "^23.10.4",
     "typedoc": "^0.13.0",
     "typedoc-webpack-plugin": "^1.1.4",

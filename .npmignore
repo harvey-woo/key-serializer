@@ -8,3 +8,4 @@ jest.config.js
 .gitignore
 .eslintignore
 .eslintrc.json
+coverage/

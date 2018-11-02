@@ -1,17 +1,31 @@
 {
   "name": "@cat5th/key-serializer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "serilize keys and query keys deep in an object",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "test": "jest",
     "build": "npm run type && webpack",
     "type": "tsc --emitDeclarationOnly",
-    "lint": "eslint 'src/**/*.ts'"
+    "lint": "eslint 'src/**/*.ts'",
+    "codecov": "codecov"
   },
-  "author": "Alphmega",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harvey-woo/key-serializer.git"
+  },
+  "keywords": [
+    "key",
+    "serializer"
+  ],
+  "author": "Harvey.Woo",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harvey-woo/key-serializer/issues"
+  },
+  "homepage": "https://github.com/harvey-woo/key-serializer#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.1.2",

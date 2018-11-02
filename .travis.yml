@@ -15,7 +15,7 @@ before_deploy:
   - npm run build
 deploy:
   provider: npm
-  email: i@cat5th.com
+  email: harvey.woo@outlook.com
   api_key: $NPM_AUTH_TOKEN
   skip_cleanup: true
   on:

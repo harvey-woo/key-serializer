@@ -7,6 +7,12 @@ test('parse', () => {
   expect(serializer.parse('a[1].c[2]')).toEqual(['a', 1, 'c', 2])
 })
 describe('test query', () => {
+  test('with nullable', () => {
+    const result = serializer.query(obj, null)
+    expect(result.value).toBe(obj)
+    const result2 = serializer.query(obj, '')
+    expect(result2.value).toBe(obj)
+  })
   test('with string', () => {
     const result = serializer.query(obj, 'a[1].b[1]')
     expect(result.value).toBe(6)

@@ -12,7 +12,7 @@ const keySerializer = {
       memo += typeof item === 'number' ? `[${item}]` : i === 0 ? item : `.${item}`
     , '') as string
   },
-  query(target: any, keys: string | PublicKey[]) {
+  query(target: any, keys?: string | PublicKey[] | null) {
     if (keys == null || keys === '') {
       return { target, key: undefined, value: target }
     }

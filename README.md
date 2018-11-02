@@ -23,7 +23,7 @@ keySerializer.stringify(['a', 1, 'b', 0])
 ### parse keys
 
 ```javascript
-keySerializer.stringify('a[1].b[0]')
+keySerializer.parse('a[1].b[0]')
 // result: ['a', 1, 'b', 0]
 ```
 ### query object

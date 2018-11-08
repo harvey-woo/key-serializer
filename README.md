@@ -1,6 +1,8 @@
 # key-serializer
 serilize keys and query keys deep in an object
 
+[documentation](https://harvey-woo.github.io/key-serializer/index.html)
+
 [![npm version](https://img.shields.io/npm/v/@cat5th/key-serializer.svg?style=flat-square)](https://www.npmjs.com/package/@cat5th/key-serializer)
 [![coverage](https://img.shields.io/codecov/c/github/harvey-woo/key-serializer.svg?style=flat-square)](https://codecov.io/gh/harvey-woo/key-serializer)
 [![npm downloads](https://img.shields.io/npm/dt/@cat5th/key-serializer.svg?style=flat-square)](https://www.npmjs.com/package/@cat5th/key-serializer)

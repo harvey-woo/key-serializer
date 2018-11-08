@@ -18,6 +18,11 @@ describe('test query', () => {
     expect(result.value).toBe(6)
     expect(result.target).toBe(obj.a[1].b)
   })
+  test('create target', () => {
+    const target = { a: { } as any }
+    serializer.query(target, 'a.b[0].c', true)
+    expect(Array.isArray(target.a.b[0])).toBe(true)
+  })
 })
 describe('test get', () => {
   test('with string', () => {
@@ -27,8 +32,16 @@ describe('test get', () => {
     expect(serializer.get(obj, ['a', 1, 'b', 1])).toBe(6)
   })
 })
-test('set', () => {
-  const obj = { a: [{ b: [1, 2], c: [3, 4] }, { b: [5, 6], c: [7, 8] }] }
-  serializer.set(obj, 'a[1].b[1]', 2)
-  expect(obj.a[1].b[1]).toBe(2)
+describe('test set', () => {
+  test('set', () => {
+    const obj = { a: [{ b: [1, 2], c: [3, 4] }, { b: [5, 6], c: [7, 8] }] }
+    serializer.set(obj, 'a[1].b[1]', 2)
+    expect(obj.a[1].b[1]).toBe(2)
+  })
+  test('set nothing', () => {
+    const s = { a: 1 }
+    const b = JSON.parse(JSON.stringify(s))
+    serializer.set(s, null, 2)
+    expect(s).toEqual(b)
+  })  
 })

@@ -14,10 +14,12 @@
     "sourceType": "module"
   },
   "rules": {
+    "no-unused-vars": "off",
     "no-undef": "off",
     "indent": [
       "error",
-      2
+      2,
+      { "SwitchCase": 1 }
     ],
     "linebreak-style": [
       "error",

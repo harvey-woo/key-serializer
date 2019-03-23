@@ -14,7 +14,7 @@ export PAGER=cat
 # Create the URL to push merge to 
 URL=$(git remote -v | head -n1 | cut -f2 | cut -d" " -f1)
 echo "Repo url is $URL"
-PUSH_URL="https://$GITHUB_TOKEN:$GIT_PASS@${URL:6}"
+PUSH_URL="https://$GITHUB_TOKEN@${URL:6}"
 # Checkout the dev branch
 #git checkout $FROM_BRANCH && \
 #echo "Checking out $TO_BRANCH..." && \

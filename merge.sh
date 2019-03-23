@@ -6,7 +6,6 @@ if [ ! -n $GITHUB_TOKEN ] ; then
 fi
 
 # Specify the development branch and stable branch names
-FROM_BRANCH="develop"
 TO_BRANCH="master"
 
 # Get the current branch
@@ -19,14 +18,14 @@ PUSH_URL="https://$GITHUB_TOKEN:$GIT_PASS@${URL:6}"
 # Checkout the dev branch
 #git checkout $FROM_BRANCH && \
 #echo "Checking out $TO_BRANCH..." && \
-git checkout .
+git checkout $TRAVIS_BRANCH .
 # Checkout the latest stable
 git fetch origin $TO_BRANCH:$TO_BRANCH && \
 git checkout $TO_BRANCH && \
 
 # Merge the dev into latest stable
 echo "Merging changes..." && \
-git merge $FROM_BRANCH && \
+git merge $TRAVIS_BRANCH && \
 
 # Push changes back to remote vcs
 echo "Pushing changes..." && \

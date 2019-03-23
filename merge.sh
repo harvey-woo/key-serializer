@@ -19,7 +19,7 @@ PUSH_URL="https://$GITHUB_TOKEN:$GIT_PASS@${URL:6}"
 # Checkout the dev branch
 #git checkout $FROM_BRANCH && \
 #echo "Checking out $TO_BRANCH..." && \
-
+git checkout .
 # Checkout the latest stable
 git fetch origin $TO_BRANCH:$TO_BRANCH && \
 git checkout $TO_BRANCH && \

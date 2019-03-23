@@ -1,3 +1,7 @@
+## [0.2.4](https://github.com/harvey-woo/key-serializer/compare/v0.2.3...v0.2.4) (2019-03-23)
+
+
+
 ## [0.2.3](https://github.com/harvey-woo/key-serializer/compare/v0.2.1...v0.2.3) (2019-03-23)
 
 

@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/harvey-woo/key-serializer/compare/v0.2.0...v0.2.1) (2019-03-23)
+
+
+### Bug Fixes
+
+* [#2](https://github.com/harvey-woo/key-serializer/issues/2) ([36f32d0](https://github.com/harvey-woo/key-serializer/commit/36f32d0))
+
+
+
 # [0.2.0](https://github.com/harvey-woo/key-serializer/compare/v0.1.8...v0.2.0) (2018-11-08)
 
 

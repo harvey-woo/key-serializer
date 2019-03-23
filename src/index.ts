@@ -62,7 +62,7 @@ export function query(target: any, keys?: string | PublicKey[] | null, createdTa
   while (keys.length) {
     target = value
     key = keys.shift()!
-    if (target && target.hasOwnProperty(key) && createdTarget) {
+    if (target && !target.hasOwnProperty(key) && createdTarget) {
       if (typeof key === 'number') {
         target[key] = []
       } else {

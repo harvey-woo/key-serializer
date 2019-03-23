@@ -9,7 +9,7 @@ if: tag IS present
 
 branches:
   only:
-  - develop
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 
 script:
   - npm run lint

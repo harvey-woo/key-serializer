@@ -58,8 +58,11 @@ export function query(target: any, keys?: string | PublicKey[] | null, createdTa
     keys = keys.slice() as PublicKey[]
   }
   let value = target
-  let key: PublicKey | undefined
-  while (keys.length) {
+  let key: PublicKey
+  if (!keys.length) {
+    return { target, value }
+  }
+  do {
     target = value
     key = keys.shift()!
     if (target && !target.hasOwnProperty(key) && createdTarget) {
@@ -71,7 +74,7 @@ export function query(target: any, keys?: string | PublicKey[] | null, createdTa
     }
     // this line may throw when target is undefined, and i do not need handle
     value = target[key]
-  }
+  } while(keys.length)
   return { target, key, value }
 }
 /**
@@ -108,7 +111,7 @@ export function get(target: object, keys: string | PublicKey[] | null): any {
  */
 export function set(target: object, keys: string | PublicKey[] | null, value: any): void {
   const result = query(target, keys)
-  if (result.key !== undefined) {
+  if (result.key) {
     result.target[result.key] = value
   }
 }

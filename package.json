@@ -1,6 +1,6 @@
 {
   "name": "@cat5th/key-serializer",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "serilize keys and query keys deep in an object",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

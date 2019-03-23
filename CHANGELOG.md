@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/harvey-woo/key-serializer/compare/v0.2.1...v0.2.2) (2019-03-23)
+
+
+### Bug Fixes
+
+* eslint error ([b67e629](https://github.com/harvey-woo/key-serializer/commit/b67e629))
+
+
+
 ## [0.2.1](https://github.com/harvey-woo/key-serializer/compare/v0.2.0...v0.2.1) (2019-03-23)
 
 
